@@ -1,1 +1,21 @@
-game.Players.LocalPlayer:Kick("Kick For Game [ Mera Hub ] ?? Otupic for update script please to join for 2 day thank🤑")
+local id = game.PlaceId  
+
+if id == 93229012077312 then
+    SupportLo = true
+else
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Xam-Vai-Cu-Ra-Day-La-Code-Sai-Game-Khong-Kick-Nha"))()
+end
+
+SupportLo = false
+
+
+if game.PlaceId == 93229012077312 then
+    SupportLo = true
+end
+
+game.StarterGui:SetCore("SendNotification", {
+                            Title = "New Update", 
+                            Text = "Script Updating" ,
+                            Icon = "rbxassetid://0",
+                            Duration = 15
+                        })
