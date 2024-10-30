@@ -3,16 +3,16 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Hiru Hub",
-    SubTitle = " Vu Duy",
+    Title = "Nightmera Hub",
+    SubTitle = " Free",
     TabWidth = 160,
-    Size = UDim2.fromOffset(500, 320),
+    Size = UDim2.fromOffset(750, 330),
     Acrylic = true,
     Theme = "Darker",
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
-    home = Window:AddTab({ Title = "Tab Info", Icon = "activity" }),
+    home = Window:AddTab({ Title = "Tab Info", Icon = "" }),
     Main = Window:AddTab({ Title = "Tab Farm", Icon = "home" }),
     Sea = Window:AddTab({ Title = "Tab Sea Event", Icon = "anchor" }),
     ITM = Window:AddTab({ Title = "Tab Items", Icon = "sword" }),
@@ -6103,13 +6103,13 @@ spawn(function()
     end)
 end)
 
-
-local ToggleKillPlayerTrial = Tabs.Race:AddToggle("ToggleKillPlayerTrial", {Title = "Auto Kill player Trial!",Description = "", Default = false })
-ToggleKillPlayerTrial:OnChanged(function(Value)
-    _G.KillAfterTrials = value
-    StopTween(_G.KillAfterTrials)
-end)
-
+local ToggleFastAttack = Tabs.Race:AddToggle("ToggleFastAttack", {Title = "Kill Player", Default = false })
+    ToggleFastAttack:OnChanged(function(vu)
+        _G.KillAfterTrials = vu
+        StopTween(_G.KillAfterTrials)
+    end)
+    Options.ToggleFastAttack:SetValue(false)
+    
 spawn(function()
     while wait() do 
         pcall(function()
